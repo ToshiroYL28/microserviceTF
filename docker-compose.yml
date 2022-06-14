@@ -1,0 +1,36 @@
+version: '3'
+services:
+  discovery:
+    image: microservice-docker-discovery:0.0.1-SNAPSHOT
+    ports:
+      - 8761:8761
+  config:
+    image: microservice-docker-config:0.0.1-SNAPSHOT
+    links:
+      - discovery
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+      - discovery
+    ports:
+      - 8888:8888
+  school-service:
+    image: microservice-docker-school-service:0.0.1-SNAPSHOT
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+      - discovery
+      - config
+  school-ui:
+    image: microservice-docker-school-ui:0.0.1-SNAPSHOT
+    environment:
+      - JAVA_OPTS=
+        -DEUREKA_SERVER=http://discovery:8761/eureka
+    restart: on-failure
+    depends_on:
+      - discovery
+      - config
+    ports:
+      - 8080:8080
