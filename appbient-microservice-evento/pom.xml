@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>appbientMicroserviceEvento</artifactId>
+	<artifactId>appbient-microservice-evento</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>appbientMicroserviceEvento</name>
+	<name>appbient-microservice-evento</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -131,10 +131,10 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>microservice-docker-${project.artifactid}</repository>
+					<repository>microservice-docker-${project.artifactId}</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
-						<JAR_FILE>${project.build.finalname}.jar</JAR_FILE>
+						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
 			</plugin>

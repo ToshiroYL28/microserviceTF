@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/Appbient-Microservice-Foros/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Appbient-Microservice-Foros/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Appbient-Microservice-Usuarios/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Appbient-Microservice-Usuarios/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/appbient-microservice-evento/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/appbient-microservice-evento/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/appbient-microservice-foros/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/appbient-microservice-foros/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/appbient-microservice-proyectos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/appbient-microservice-proyectos/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/appbientMicroserviceEvento/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/appbientMicroserviceEvento/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/appbient-microservice-usuarios/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/appbient-microservice-usuarios/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/discovery/src/main/resources" charset="UTF-8" />
