@@ -117,10 +117,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>microservice-docker-${project.artifactId}</repository>
+                    <repository>microservice-docker-${project.artifactid}</repository>
                     <tag>${project.version}</tag>
                     <buildArgs>
-                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+                        <JAR_FILE>${project.build.finalname}.jar</JAR_FILE>
                     </buildArgs>
                 </configuration>
             </plugin>
