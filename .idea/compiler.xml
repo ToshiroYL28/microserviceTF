@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="appbientMicroserviceProyecto" />
+        <module name="discovery" />
+        <module name="Appbient_microservice_Usuarios" />
+        <module name="appbientmicroserviceevento" />
         <module name="Appbient_microservice_Foro" />
         <module name="config" />
-        <module name="discovery" />
         <module name="appbientMicroserviceEvento" />
-        <module name="Appbient_microservice_Usuarios" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="Appbient_microservice_Usuarios" options="-parameters" />
       <module name="appbientMicroserviceEvento" options="-parameters" />
       <module name="appbientMicroserviceProyecto" options="-parameters" />
+      <module name="appbientmicroserviceevento" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="discovery" options="-parameters" />
     </option>

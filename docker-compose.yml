@@ -15,32 +15,8 @@ services:
       - discovery
     ports:
       - 8888:8888
-  Appbient-Microservice-Foros:
-    image: Appbient_microservice_Foro:0.0.1-SNAPSHOT
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
-        - discovery
-        - config
-  appbientMicroserviceProyecto:
-    image: appbientMicroserviceProyecto:0.0.1-SNAPSHOT
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
-        - discovery
-        - config
-  Appbient_microservice_Usuarios:
-    image: Appbient_microservice_Usuarios:0.0.1-SNAPSHOT
-    environment:
-      - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
-        - discovery
-        - config
-  appbientMicroserviceEvento:
-    image: appbientMicroserviceEvento:0.0.1-SNAPSHOT
+  appbient-microservice-proyecto:
+    image: appbient-microservice-proyecto:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -DEUREKA_SERVER=http://discovery:8761/eureka
