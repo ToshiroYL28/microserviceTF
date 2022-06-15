@@ -5,6 +5,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/appbientMicroserviceEvento/pom.xml" />
+        <option value="$PROJECT_DIR$/Appbient-Microservice-Usuarios/pom.xml" />
+        <option value="$PROJECT_DIR$/Appbient-Microservice-Proyectos/pom.xml" />
+        <option value="$PROJECT_DIR$/Appbient-Microservice-Foros/pom.xml" />
       </list>
     </option>
   </component>
