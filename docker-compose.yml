@@ -15,35 +15,47 @@ services:
       - discovery
     ports:
       - 8888:8888
-  appbient_microservice_foro:
-    image: appbient_microservice_foro:0.0.1-SNAPSHOT
+  appbient-microservice-foro:
+    image: microservice-docker-appbient_microservice_foro:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
-        - discovery
-        - config
+    restart: on-failure
+    depends_on:
+      - discovery
+      - config
+    ports:
+      - 8084:8084
   appbient-microservice-proyecto:
-    image: appbient-microservice-proyecto:0.0.1-SNAPSHOT
+    image: microservice-docker-appbient-microservice-proyecto:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
+    restart: on-failure
+    depends_on:
         - discovery
         - config
+    ports:
+      - 8083:8083
   appbient_microservice_usuarios:
-    image: appbient_microservice_usuarios:0.0.1-SNAPSHOT
+    image: microservice-docker-appbient_microservice_usuarios:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
+    restart: on-failure
+    depends_on:
         - discovery
         - config
+    ports:
+      - 8081:8081
   appbient-microservice-evento:
-    image: appbient-microservice-evento:0.0.1-SNAPSHOT
+    image: microservice-docker-appbient-microservice-evento:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
         -DEUREKA_SERVER=http://discovery:8761/eureka
-      depends_on:
+    restart: on-failure
+    depends_on:
         - discovery
         - config
+    ports:
+      - 8082:8082

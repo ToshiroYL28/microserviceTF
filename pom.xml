@@ -13,9 +13,10 @@
 	<modules>
 		<module>config</module>
 		<module>discovery</module>
-		<module>Appbient-Microservice-Foros</module>
-		<module>Appbient-Microservice-Proyectos</module>
-		<module>Appbient-Microservice-Usuarios</module>
-		<module>appbientMicroserviceEvento</module>
+		<module>appbient-microservice-evento</module>
+		<module>appbient-microservice-foros</module>
+		<module>appbient-microservice-usuarios</module>
+		<module>appbient-microservice-proyectos</module>
+
 	</modules>
 </project>

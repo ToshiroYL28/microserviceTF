@@ -13,8 +13,8 @@
         <module name="Appbient_microservice_Usuarios" />
         <module name="appbient_microservice_usuarios" />
         <module name="config" />
-        <module name="appbient-microservice-evento" />
         <module name="Appbient_microservice_Foro" />
+        <module name="appbient-microservice-evento" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
