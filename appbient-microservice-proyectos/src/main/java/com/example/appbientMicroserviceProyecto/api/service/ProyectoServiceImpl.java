@@ -3,7 +3,7 @@ package com.example.appbientMicroserviceProyecto.api.service;
 import com.example.appbientMicroserviceProyecto.api.domain.model.entity.Proyecto;
 import com.example.appbientMicroserviceProyecto.api.domain.persistence.ProyectosRepository;
 import com.example.appbientMicroserviceProyecto.api.domain.service.ProyectoService;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.CreateProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.CreateProyectosResource;
 import com.example.appbientMicroserviceProyecto.shared.exception.ResourceNotFoundException;
 import com.example.appbientMicroserviceProyecto.shared.exception.ResourceValidationException;
 import org.springframework.http.ResponseEntity;

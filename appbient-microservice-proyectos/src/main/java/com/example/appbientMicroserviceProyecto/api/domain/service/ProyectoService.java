@@ -1,7 +1,7 @@
 package com.example.appbientMicroserviceProyecto.api.domain.service;
 
 import com.example.appbientMicroserviceProyecto.api.domain.model.entity.Proyecto;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.CreateProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.CreateProyectosResource;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

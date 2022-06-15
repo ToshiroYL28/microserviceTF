@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="appbientMicroserviceProyecto" />
         <module name="Appbient_microservice_Foro" />
+        <module name="config" />
         <module name="discovery" />
         <module name="appbientMicroserviceEvento" />
         <module name="Appbient_microservice_Usuarios" />
@@ -20,6 +21,7 @@
       <module name="Appbient_microservice_Usuarios" options="-parameters" />
       <module name="appbientMicroserviceEvento" options="-parameters" />
       <module name="appbientMicroserviceProyecto" options="-parameters" />
+      <module name="config" options="-parameters" />
       <module name="discovery" options="-parameters" />
     </option>
   </component>

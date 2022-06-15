@@ -1,9 +1,8 @@
 package com.example.appbientMicroserviceProyecto.api.mapping;
 
 import com.example.appbientMicroserviceProyecto.api.domain.model.entity.Proyecto;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.CreateProyectosResource;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.ProyectosResource;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.UpdateProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.ProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.UpdateProyectosResource;
 import com.example.appbientMicroserviceProyecto.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

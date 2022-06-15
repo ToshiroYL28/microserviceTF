@@ -2,9 +2,9 @@ package com.example.appbientMicroserviceProyecto.api.controllers;
 
 import com.example.appbientMicroserviceProyecto.api.domain.service.ProyectoService;
 import com.example.appbientMicroserviceProyecto.api.mapping.ProyectoMapper;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.CreateProyectosResource;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.ProyectosResource;
-import com.example.appbientMicroserviceProyecto.api.resource.Proyectos.UpdateProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.CreateProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.ProyectosResource;
+import com.example.appbientMicroserviceProyecto.api.resource.proyectos.UpdateProyectosResource;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

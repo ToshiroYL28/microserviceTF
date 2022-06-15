@@ -1,8 +1,6 @@
-package com.example.appbientMicroserviceProyecto.api.resource.Proyectos;
+package com.example.appbientMicroserviceProyecto.api.resource.proyectos;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
@@ -10,9 +8,7 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class CreateProyectosResource {
+public class UpdateProyectosResource {
     @NotNull
     @NotBlank
     private Long idOng;
@@ -20,4 +16,6 @@ public class CreateProyectosResource {
     @NotNull
     @NotBlank
     private String name;
+
+    private boolean active;
 }

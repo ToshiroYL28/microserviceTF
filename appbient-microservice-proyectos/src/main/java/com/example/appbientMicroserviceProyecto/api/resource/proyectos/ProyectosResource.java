@@ -1,4 +1,4 @@
-package com.example.appbientMicroserviceProyecto.api.resource.Proyectos;
+package com.example.appbientMicroserviceProyecto.api.resource.proyectos;
 
 import java.util.Date;
 
