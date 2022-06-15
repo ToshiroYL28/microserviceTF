@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>Appbient_microservice_Foro</artifactId>
+    <artifactId>appbient_microservice_foro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>appbient_microservice_foro</name>
     <description>appbient_microservice_foro</description>

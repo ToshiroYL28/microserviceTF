@@ -9,16 +9,22 @@
         <module name="appbient-microservice-proyecto" />
         <module name="appbientMicroserviceProyecto" />
         <module name="discovery" />
-        <module name="appbientmicroserviceevento" />
         <module name="appbient_microservice_foro" />
+        <module name="Appbient_microservice_Usuarios" />
         <module name="appbient_microservice_usuarios" />
         <module name="config" />
         <module name="appbient-microservice-evento" />
+        <module name="Appbient_microservice_Foro" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="appbientmicroserviceevento" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Appbient_microservice_Foro" options="-parameters" />
+      <module name="Appbient_microservice_Usuarios" options="-parameters" />
       <module name="appbient-microservice-evento" options="-parameters" />
       <module name="appbient-microservice-proyecto" options="-parameters" />
       <module name="appbientMicroserviceProyecto" options="-parameters" />
