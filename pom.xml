@@ -11,6 +11,11 @@
 	<name>parent-project</name>
 
 	<modules>
-
+		<module>config</module>
+		<module>discovery</module>
+		<module>Appbient-Microservice-Foros</module>
+		<module>Appbient-Microservice-Proyectos</module>
+		<module>Appbient-Microservice-Usuarios</module>
+		<module>appbientMicroserviceEvento</module>
 	</modules>
 </project>
