@@ -4,7 +4,8 @@ import com.example.appbient_microservice_usuarios.api.domain.service.OngService;
 import com.example.appbient_microservice_usuarios.api.mapping.OngMapper;
 import com.example.appbient_microservice_usuarios.api.resource.Ong.CreateOngResource;
 import com.example.appbient_microservice_usuarios.api.resource.Ong.OngResource;
-import io.swagger.annotations.Api;
+import com.example.appbient_microservice_usuarios.api.resource.Ong.UpdateOngResource;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Pageable;
 @RestController
 @RequestMapping("/ong")
-@Api(tags = "ONG")
+@Tag(name = "ONG")
 public class OngController {
     @Autowired
     private OngService ongService;
@@ -31,7 +32,7 @@ public class OngController {
     }
 
     @PutMapping("/{id}")
-    public OngResource updateOng(@PathVariable Long id, CreateOngResource resource) {
+    public OngResource updateOng(@PathVariable Long id, UpdateOngResource resource) {
         return mapper.toResource(ongService.update(id, mapper.toModel(resource)));
     }
 

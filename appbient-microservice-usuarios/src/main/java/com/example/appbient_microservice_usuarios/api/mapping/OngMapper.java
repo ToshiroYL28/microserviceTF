@@ -28,9 +28,6 @@ public class OngMapper implements Serializable {
         return new PageImpl<>(mapper.mapList(modelList, OngResource.class), pageable, modelList.size());
     }
 
-    public Ong toModel(CreateOngResource OngResource) {
-        return mapper.map(OngResource, Ong.class);
-    }
 
     public Ong toModel(UpdateOngResource OngResource) {
         return mapper.map(OngResource, Ong.class);

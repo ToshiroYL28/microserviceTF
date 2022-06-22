@@ -4,25 +4,25 @@ import com.example.appbient_microservice_usuarios.api.domain.model.entity.Ong;
 import com.example.appbient_microservice_usuarios.api.domain.persistence.OngRepository;
 import com.example.appbient_microservice_usuarios.api.domain.service.OngService;
 import com.example.appbient_microservice_usuarios.api.resource.Ong.CreateOngResource;
-import com.example.appbient_microservice_usuarios.shared.exception.ResourceValidationException;
+import com.example.appbient_microservice_usuarios.shared.exception.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
+
+
 import java.util.List;
-import java.util.Set;
+
 
 @Service
 public class OngServiceImpl implements OngService {
-    private final String ENTITY="ONG";
+    private static final String ENTITY="ONG";
 
     private final OngRepository ongRepository;
-    private final Validator validator;
 
-    public OngServiceImpl(OngRepository ongRepository, Validator validator) {
+
+    public OngServiceImpl(OngRepository ongRepository) {
         this.ongRepository = ongRepository;
-        this.validator = validator;
+
     }
 
     @Override
@@ -32,7 +32,7 @@ public class OngServiceImpl implements OngService {
 
     @Override
     public Ong getById(Long id) {
-        return ongRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("ONG not found"));
+        return ongRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(ENTITY, id));
     }
 
     @Override
@@ -46,10 +46,6 @@ public class OngServiceImpl implements OngService {
 
     @Override
     public Ong update(Long id, Ong request) {
-        Set<ConstraintViolation<Ong>> violations = validator.validate(request);
-
-        if(!violations.isEmpty())
-            throw new ResourceValidationException(ENTITY, violations);
 
         return ongRepository.findById(id).map(ong ->
             ongRepository.save(

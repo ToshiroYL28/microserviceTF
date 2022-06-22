@@ -4,7 +4,9 @@ import com.example.appbient_microservice_usuarios.api.domain.service.LocalServic
 import com.example.appbient_microservice_usuarios.api.mapping.LocalMapper;
 import com.example.appbient_microservice_usuarios.api.resource.Local.CreateLocalResource;
 import com.example.appbient_microservice_usuarios.api.resource.Local.LocalResource;
-import io.swagger.annotations.Api;
+
+import com.example.appbient_microservice_usuarios.api.resource.Local.UpdateLocalResource;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,26 +14,22 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ong/{ongId}/local")
-@Api(tags = "Local")
+@Tag(name = "Local")
 public class LocalController {
     @Autowired
     private LocalService localService;
     @Autowired
     private LocalMapper mapper;
 
-    @GetMapping
-    public Page<LocalResource> getAllLocals(@PathVariable Long ongId, Pageable pageable) {
-        return mapper.modelListToPage(localService.getByOngId(ongId), pageable);
-    }
 
     @PostMapping
-    public LocalResource createLocal(@PathVariable Long ongId,@RequestBody CreateLocalResource request) {
-        return mapper.toResource(localService.create(ongId,mapper.toModel(request)));
+    public LocalResource createLocal(@RequestBody CreateLocalResource resource) {
+        return mapper.toResource(localService.create(resource));
     }
 
     @PutMapping("/{localId}")
-    public LocalResource updateLocal(@PathVariable Long localId, @RequestBody CreateLocalResource request) {
-        return mapper.toResource(localService.update(localId, mapper.toModel(request)));
+    public LocalResource updateLocal(@PathVariable Long localId, @RequestBody UpdateLocalResource resource) {
+        return mapper.toResource(localService.update(localId, mapper.toModel(resource)));
     }
 
 

@@ -24,11 +24,6 @@ public class VoluntarioMapper implements Serializable {
     public Page<VoluntarioResource> modelListToPage(List<Voluntario> modelList, Pageable pageable) {
         return new PageImpl<>(mapper.mapList(modelList, VoluntarioResource.class), pageable, modelList.size());
     }
-
-    public Voluntario toModel(CreateVoluntarioResource VoluntarioResource) {
-        return mapper.map(VoluntarioResource, Voluntario.class);
-    }
-
     public Voluntario toModel(UpdateVoluntarioResource VoluntarioResource) {
         return mapper.map(VoluntarioResource, Voluntario.class);
     }

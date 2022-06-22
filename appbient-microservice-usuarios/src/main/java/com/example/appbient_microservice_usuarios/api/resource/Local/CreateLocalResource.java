@@ -12,6 +12,5 @@ import javax.validation.constraints.Size;
 public class CreateLocalResource {
     @NotNull
     @NotBlank
-    @Size(max = 100)
     private String address;
 }

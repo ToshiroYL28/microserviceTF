@@ -30,6 +30,4 @@ public class ResourceValidationException extends RuntimeException{
 
 
 
-
-
 }
