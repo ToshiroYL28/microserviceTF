@@ -4,15 +4,15 @@ import com.example.appbientMicroserviceEvento.api.domain.service.ActividadesEven
 import com.example.appbientMicroserviceEvento.api.mapping.ActividadesEventoMapper;
 import com.example.appbientMicroserviceEvento.api.resource.ActividadesEvento.ActividadesEventoResource;
 import com.example.appbientMicroserviceEvento.api.resource.ActividadesEvento.CreateActividadesEventoResource;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/v1/eventos/{eventoId}/detallesEvento/actividades")
-@Api(tags = "ActividadesEvento")
+@Tag(name = "ActividadesEvento")
 public class ActividadesEventoController {
     @Autowired
     private ActividadesEventoService actividadesEventoService;
@@ -27,10 +27,6 @@ public class ActividadesEventoController {
     public ActividadesEventoResource createActividadesEnEvento(@PathVariable Long detallesEventoId, @RequestBody CreateActividadesEventoResource resource){
         return mapper.toResource(actividadesEventoService.create(detallesEventoId, resource));
     }
-    //@PutMapping
-    //public ActvidadesEventoResource updateactvidadesEventoResource(@PathVariable Long id, @RequestBody UpdateActividadesEventoResource resource){
-    //    return mapper.toResource(actividadesEventoService.update(id, mapper.toModel(resource)));
-    //}
     @DeleteMapping("/{id}")
     public void deleteActividadesEvento(@PathVariable Long id){
         actividadesEventoService.delete(id);

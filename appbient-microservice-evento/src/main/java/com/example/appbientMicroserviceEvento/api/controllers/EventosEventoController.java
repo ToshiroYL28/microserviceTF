@@ -4,7 +4,7 @@ import com.example.appbientMicroserviceEvento.api.domain.service.EventosEventoSe
 import com.example.appbientMicroserviceEvento.api.mapping.EventosEventoMapper;
 import com.example.appbientMicroserviceEvento.api.resource.EventosEvento.CreateEventosEventoResource;
 import com.example.appbientMicroserviceEvento.api.resource.EventosEvento.EventosEventoResource;
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/eventos")
-@Api(tags = "Evento")
+@Tag(name = "Evento")
 public class EventosEventoController {
     @Autowired
     private EventosEventoService eventosEventoService;
-    //a
     @Autowired
     private EventosEventoMapper mapper;
 
