@@ -4,7 +4,7 @@ import com.example.appbient_microservice_foro.api.domain.service.RespuestaForoSe
 import com.example.appbient_microservice_foro.api.mapping.RespuestaForoMapper;
 import com.example.appbient_microservice_foro.api.resource.RespuestaForo.CreateRespuestaForoResource;
 import com.example.appbient_microservice_foro.api.resource.RespuestaForo.RespuestaForoResource;
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/publicacion/{idPublicacion}/comentarios/{idComentario}/respuestas")
-@Api(tags = "RespuestaForo")
+@Tag(name = "RespuestaForo")
 public class RespuestaForoController {
     @Autowired
     private RespuestaForoService respuestaForoService;

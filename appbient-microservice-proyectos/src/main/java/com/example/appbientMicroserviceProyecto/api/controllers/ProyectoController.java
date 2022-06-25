@@ -5,7 +5,7 @@ import com.example.appbientMicroserviceProyecto.api.mapping.ProyectoMapper;
 import com.example.appbientMicroserviceProyecto.api.resource.proyectos.CreateProyectosResource;
 import com.example.appbientMicroserviceProyecto.api.resource.proyectos.ProyectosResource;
 import com.example.appbientMicroserviceProyecto.api.resource.proyectos.UpdateProyectosResource;
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/proyectos")
-@Api(tags = "Proyectos")
+@Tag(name = "Proyectos")
 public class ProyectoController {
     @Autowired
     private ProyectoService proyectoService;
