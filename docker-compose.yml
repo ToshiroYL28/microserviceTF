@@ -72,26 +72,26 @@ services:
     image: microservice-docker-admin-service:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
-         -DEUREKA_SERVER=http://discovery:8761/eureka
+        -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
-        - discovery
-        - config
+      - discovery
+      - config
     ports:
-        - 8085:8085
+      - 8085:8085
     networks:
-        - appbient
+      - appbient
   gateway-service:
     image: microservice-docker-gateway-service:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
-         -DEUREKA_SERVER=http://discovery:8761/eureka
+        -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
-        - discovery
-        - config
+      - discovery
+      - config
     ports:
-        - 8080:8080
+      - 8080:8080
     networks:
-        - appbient
+      - appbient
 
 networks:
   appbient:
