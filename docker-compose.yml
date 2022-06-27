@@ -12,7 +12,7 @@ services:
       - discovery
     environment:
       - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery:8761/eureka
+         -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
       - discovery
     ports:
@@ -23,7 +23,7 @@ services:
     image: microservice-docker-appbient_microservice_usuarios:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
-        -DEUREKA_SERVER=http://discovery:8761/eureka
+         -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
         - discovery
         - config
@@ -72,7 +72,7 @@ services:
     image: microservice-docker-admin-service:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
-      -DEUREKA_SERVER=http://discovery:8761/eureka
+         -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
         - discovery
         - config
@@ -84,7 +84,7 @@ services:
     image: microservice-docker-gateway-service:0.0.1-SNAPSHOT
     environment:
       - JAVA_OPTS=
-      -DEUREKA_SERVER=http://discovery:8761/eureka
+         -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
         - discovery
         - config
