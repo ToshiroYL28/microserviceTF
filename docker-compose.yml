@@ -85,8 +85,8 @@ services:
       - JAVA_OPTS=
         -DEUREKA_SERVER=http://discovery:8761/eureka
     depends_on:
-      - discovery
       - config
+      - discovery
     ports:
       - 8080:8080
     networks:
