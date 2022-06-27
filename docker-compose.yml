@@ -4,6 +4,8 @@ services:
     image: microservice-docker-discovery:0.0.1-SNAPSHOT
     ports:
       - 8761:8761
+    networks:
+      - appbient
   config:
     image: microservice-docker-config:0.0.1-SNAPSHOT
     links:
@@ -15,6 +17,8 @@ services:
       - discovery
     ports:
       - 8888:8888
+    networks:
+      - appbient
   appbient_microservice_usuarios:
     image: microservice-docker-appbient_microservice_usuarios:0.0.1-SNAPSHOT
     environment:
@@ -25,6 +29,8 @@ services:
         - config
     ports:
       - 8081:8081
+    networks:
+      - appbient
   appbient-microservice-evento:
     image: microserive-docker-appbient-microservice-evento:0.0.1-SNAPSHOT
     environment:
@@ -35,6 +41,8 @@ services:
       - config
     ports:
       - 8082:8082
+    networks:
+      - appbient
 
   appbient-microservice-proyectos:
     image: microserive-docker-appbient-microservice-proyectos:0.0.1-SNAPSHOT
@@ -46,6 +54,8 @@ services:
       - config
     ports:
       - 8083:8083
+    networks:
+      - appbient
   appbient_microservice_foros:
     image: microserive-docker-appbient_microservice_foros:0.0.1-SNAPSHOT
     environment:
@@ -56,6 +66,8 @@ services:
       - config
     ports:
       - 8084:8084
+    networks:
+      - appbient
 
 networks:
-  - appbient
+  appbient:
