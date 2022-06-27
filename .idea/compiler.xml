@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="parent-pom" />
         <module name="appbient-microservice-proyecto" />
         <module name="appbientMicroserviceProyecto" />
         <module name="discovery" />
         <module name="appbient_microservice_foro" />
         <module name="Appbient_microservice_Usuarios" />
         <module name="appbient_microservice_usuarios" />
-        <module name="config" />
         <module name="Appbient_microservice_Foro" />
         <module name="appbient-microservice-evento" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="appbientmicroserviceevento" target="1.8" />
+      <module name="config" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,6 +35,7 @@
       <module name="appbientmicroserviceevento" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="parent-pom" options="-parameters" />
     </option>
   </component>
 </project>

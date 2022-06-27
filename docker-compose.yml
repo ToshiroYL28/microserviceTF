@@ -68,6 +68,30 @@ services:
       - 8084:8084
     networks:
       - appbient
+  admin-service:
+    image: microservice-docker-admin-service:0.0.1-SNAPSHOT
+    environment:
+      - JAVA_OPTS=
+      -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+        - discovery
+        - config
+    ports:
+        - 8085:8085
+    networks:
+        - appbient
+  gateway-service:
+    image: microservice-docker-gateway-service:0.0.1-SNAPSHOT
+    environment:
+      - JAVA_OPTS=
+      -DEUREKA_SERVER=http://discovery:8761/eureka
+    depends_on:
+        - discovery
+        - config
+    ports:
+        - 8080:8080
+    networks:
+        - appbient
 
 networks:
   appbient:
