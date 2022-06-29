@@ -24,10 +24,10 @@ spring:
           predicates:
             - Path=/api/v1/publicacion/**
         - id: microservice-proyectos
-            uri: lb://appbient-microservice-proyectos
-            predicates:
+          uri: lb://appbient-microservice-proyectos
+          predicates:
               - Path=/api/v1/proyectos/**
         - id: microservice-usuarios
-            uri: lb://appbient-microservice-usuarios
-            predicates:
+          uri: lb://appbient-microservice-usuarios
+          predicates:
               - Path=/api/v1/ong/**

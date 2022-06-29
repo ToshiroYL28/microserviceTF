@@ -9,8 +9,6 @@ import com.example.appbientMicroserviceProyecto.shared.exception.ResourceValidat
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
 import java.util.List;
 import java.util.Set;
 
@@ -20,11 +18,9 @@ public class ProyectoServiceImpl implements ProyectoService {
     private static final String ENTITY = "Proyectos";
     private final ProyectosRepository proyectosRepository;
 
-    private final Validator validator;
 
-    public ProyectoServiceImpl(ProyectosRepository proyectosRepository, Validator validator) {
+    public ProyectoServiceImpl(ProyectosRepository proyectosRepository) {
         this.proyectosRepository = proyectosRepository;
-        this.validator = validator;
     }
 
     @Override
@@ -48,10 +44,7 @@ public class ProyectoServiceImpl implements ProyectoService {
 
     @Override
     public Proyecto update(Long id, Proyecto request) {
-        Set<ConstraintViolation<Proyecto>> violations = validator.validate(request);
 
-        if(!violations.isEmpty())
-            throw new ResourceValidationException(ENTITY, violations);
 
         return proyectosRepository.findById(id).map( pub ->
                         proyectosRepository.save(

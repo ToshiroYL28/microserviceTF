@@ -9,8 +9,6 @@ import com.example.appbient_microservice_foro.shared.exception.ResourceValidatio
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
 import java.util.List;
 import java.util.Set;
 
@@ -19,11 +17,9 @@ public class PublicacionForoServiceImpl implements PublicacionForoService {
     
     private static final String ENTITY = "PublicacionForo";
     private final PublicacionForoRepository pubForoRepository;
-    private final Validator validator;
 
-    public PublicacionForoServiceImpl(PublicacionForoRepository pubForoRepository, Validator validator) {
+    public PublicacionForoServiceImpl(PublicacionForoRepository pubForoRepository) {
         this.pubForoRepository = pubForoRepository;
-        this.validator = validator;
     }
 
     @Override
@@ -49,10 +45,6 @@ public class PublicacionForoServiceImpl implements PublicacionForoService {
 
     @Override
     public PublicacionForo update(Long id ,PublicacionForo request) {
-       Set<ConstraintViolation<PublicacionForo>> violations = validator.validate(request);
-
-        if(!violations.isEmpty())
-            throw new ResourceValidationException(ENTITY, violations);
 
         return pubForoRepository.findById(id).map( pub ->
                         pubForoRepository.save(
