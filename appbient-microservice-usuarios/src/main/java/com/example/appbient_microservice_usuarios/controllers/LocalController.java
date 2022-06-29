@@ -20,8 +20,6 @@ public class LocalController {
     private LocalService localService;
     @Autowired
     private LocalMapper mapper;
-
-
     @PostMapping
     public LocalResource createLocal(@RequestBody CreateLocalResource resource) {
         return mapper.toResource(localService.create(resource));

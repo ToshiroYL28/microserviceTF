@@ -29,7 +29,7 @@ public class Proyecto {
     @Size(max = 50)
     private String name;
 
-    private Date createDate;
+
     @NotNull
     @NotBlank
     private  Boolean active;

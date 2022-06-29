@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.data.domain.Pageable;
 @RestController
-@RequestMapping("/ong")
+@RequestMapping("/api/v1/ong")
 @Tag(name = "ONG")
 public class OngController {
     @Autowired
