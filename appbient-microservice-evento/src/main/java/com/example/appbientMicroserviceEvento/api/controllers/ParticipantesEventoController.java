@@ -22,7 +22,7 @@ public class ParticipantesEventoController {
     public Page<ParticipantesEventoResource> getAll(@PathVariable Long eventoId, Pageable pageable){
         return mapper.modelListToPage(participantesEventoService.getAll(), pageable);
     }
-    @PostMapping
+    @PostMapping("/{detallesEventoId}")
     public ParticipantesEventoResource createLugaresEvento(@PathVariable Long detallesEventoId, @RequestBody CreateParticipantesEventoResource resource){
         return mapper.toResource(participantesEventoService.create(detallesEventoId, resource));
     }

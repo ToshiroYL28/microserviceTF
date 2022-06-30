@@ -20,17 +20,14 @@ public class DetallesEventoEvento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @NotBlank
+
     @Size(max = 100)
     private String place;
 
-    @NotNull
-    @NotBlank
+
     private Date start_date;
 
-    @NotNull
-    @NotBlank
+
     private Date end_date;
 
     @OneToMany(targetEntity =  LugarEvento.class, cascade = CascadeType.ALL)

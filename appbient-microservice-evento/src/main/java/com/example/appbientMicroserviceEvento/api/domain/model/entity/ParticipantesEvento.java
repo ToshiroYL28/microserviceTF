@@ -18,8 +18,7 @@ public class ParticipantesEvento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @NotBlank
+
     private Long userId;
 
     @ManyToOne(targetEntity = EventosEvento.class)

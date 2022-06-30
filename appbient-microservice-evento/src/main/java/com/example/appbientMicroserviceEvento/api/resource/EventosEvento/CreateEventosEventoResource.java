@@ -14,19 +14,12 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateEventosEventoResource {
-    @NotNull
-    @NotBlank
+
     private String name;
 
-    @NotNull
-    @NotBlank
     private String description;
 
-    @NotNull
-    @NotBlank
     private Boolean active;
 
-    @NotNull
-    @NotBlank
     private Date start_date;
 }

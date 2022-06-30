@@ -18,8 +18,7 @@ public class LugarEvento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @NotBlank
+
     @Size(max = 100)
     private String address;
 

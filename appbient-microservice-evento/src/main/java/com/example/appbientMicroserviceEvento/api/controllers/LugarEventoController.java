@@ -23,7 +23,7 @@ public class LugarEventoController {
     public Page<LugarEventoResource> getAllLugaresEvento(@PathVariable Long eventoId, Pageable pageable){
         return mapper.modelListToPage(lugarEventoService.getAll(), pageable);
     }
-    @PostMapping
+    @PostMapping("/{detallesEventoId}")
     public LugarEventoResource createLugaresEvento(@PathVariable Long detallesEventoId, @RequestBody CreateLugarEventoResource resource){
         return mapper.toResource(lugarEventoService.create(detallesEventoId, resource));
     }
