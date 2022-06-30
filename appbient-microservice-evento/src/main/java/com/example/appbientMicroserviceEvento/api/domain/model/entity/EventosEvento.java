@@ -21,20 +21,14 @@ public class EventosEvento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @NotBlank
     @Size(max = 50)
     private String name;
 
-    @NotNull
-    @NotBlank
     @Size(max = 100)
     private String description;
 
     private Boolean active;
 
-    @NotNull
-    @NotBlank
     private Date start_date;
 
     @OneToMany(targetEntity = ParticipantesEvento.class, cascade = CascadeType.ALL)

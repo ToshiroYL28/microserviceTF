@@ -23,7 +23,7 @@ public class ActividadesEventoController {
     public Page<ActividadesEventoResource> getAllActividadesEnEvento(@PathVariable Long eventoId, Pageable pageable){
         return mapper.modelListToPage(actividadesEventoService.getAll(), pageable);
     }
-    @PostMapping
+    @PostMapping("/{detallesEventoId}")
     public ActividadesEventoResource createActividadesEnEvento(@PathVariable Long detallesEventoId, @RequestBody CreateActividadesEventoResource resource){
         return mapper.toResource(actividadesEventoService.create(detallesEventoId, resource));
     }

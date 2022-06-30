@@ -20,7 +20,7 @@ public class DetallesEventoController {
     @Autowired
     private DetallesEventoMapper mapper;
 
-    @GetMapping
+    @GetMapping()
     public Page<DetallesEventoResource> getDetallesEventos(Pageable pageable){
         return mapper.modelListToPage(detallesEventoService.getAll(), pageable);
     }

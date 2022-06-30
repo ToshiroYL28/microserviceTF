@@ -19,13 +19,11 @@ public class ActividadesEvento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @NotBlank
+
     @Size(max = 50)
     private String name;
 
-    @NotNull
-    @NotBlank
+
     @Size(max = 100)
     private String description;
 
