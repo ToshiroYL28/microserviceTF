@@ -20,9 +20,14 @@ public class LocalController {
     private LocalService localService;
     @Autowired
     private LocalMapper mapper;
+
+    @GetMapping
+    public Page<LocalResource> getLocalinOng(@PathVariable Long ongId, Pageable pageable){
+        return mapper.modelListToPage(localService.findByOngId(ongId), pageable);
+    }
     @PostMapping
-    public LocalResource createLocal(@RequestBody CreateLocalResource resource) {
-        return mapper.toResource(localService.create(resource));
+    public LocalResource createLocal(@PathVariable Long ongId,@RequestBody CreateLocalResource resource) {
+        return mapper.toResource(localService.create(ongId, resource));
     }
 
     @PutMapping("/{localId}")

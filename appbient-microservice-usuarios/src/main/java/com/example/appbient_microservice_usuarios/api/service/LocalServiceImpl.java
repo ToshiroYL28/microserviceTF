@@ -1,6 +1,7 @@
 package com.example.appbient_microservice_usuarios.api.service;
 
 import com.example.appbient_microservice_usuarios.api.domain.model.entity.Local;
+import com.example.appbient_microservice_usuarios.api.domain.model.entity.Ong;
 import com.example.appbient_microservice_usuarios.api.domain.persistence.LocalRepository;
 import com.example.appbient_microservice_usuarios.api.domain.persistence.OngRepository;
 import com.example.appbient_microservice_usuarios.api.domain.service.LocalService;
@@ -20,21 +21,23 @@ public class LocalServiceImpl implements LocalService {
     private static final String ENTITY="Local";
 
     private final LocalRepository localRepository;
+    private final OngRepository ongRepository;
 
 
-
-    public LocalServiceImpl(LocalRepository localRepository) {
+    public LocalServiceImpl(LocalRepository localRepository,OngRepository ongRepository) {
         this.localRepository = localRepository;
+        this.ongRepository=ongRepository;
 
 
     }
-
-
-
     @Override
-    public Local create(CreateLocalResource request) {
+    public List<Local> findByOngId(Long ongId) {   return localRepository.findByOngId(ongId);    }
+    @Override
+    public Local create(Long ongId, CreateLocalResource request) {
+        Ong ong= ongRepository.findById(ongId).orElseThrow(() -> new ResourceNotFoundException(ENTITY, ongId));
         Local local=new Local();
         local.setAddress(request.getAddress());
+        local.setOng(ong);
         return localRepository.save(local);
     }
 

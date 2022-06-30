@@ -12,5 +12,5 @@ public class OngResource {
     private String name;
     private String description;
     private String email;
-    private List<String> locals;
+
 }
