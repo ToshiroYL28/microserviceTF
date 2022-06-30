@@ -23,7 +23,7 @@ public class Local {
     @Size(max = 100)
     private String address;
     @ManyToOne(targetEntity = Ong.class)
-    @JoinColumn(name = "ong_id", nullable = false)
+    @JoinColumn(name = "ong_id")
     private Ong ong;
 
 

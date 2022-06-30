@@ -25,7 +25,9 @@ public class LocalMapper implements Serializable {
         return new PageImpl<>(mapper.mapList(modelList, LocalResource.class), pageable, modelList.size());
     }
 
-
+    public Local toModel(CreateLocalResource LocalResource) {
+        return mapper.map(LocalResource, Local.class);
+    }
     public Local toModel(UpdateLocalResource LocalResource) {
         return mapper.map(LocalResource, Local.class);
     }
