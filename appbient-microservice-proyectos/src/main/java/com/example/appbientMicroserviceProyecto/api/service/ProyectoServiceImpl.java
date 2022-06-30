@@ -34,12 +34,13 @@ public class ProyectoServiceImpl implements ProyectoService {
     }
 
     @Override
-    public Proyecto create(CreateProyectosResource request) {
+    public String create(CreateProyectosResource request) {
         Proyecto pro = new Proyecto();
         pro.setIdOng(request.getIdOng());
         pro.setName(request.getName());
         pro.setActive(true);
-        return proyectosRepository.save(pro);
+        proyectosRepository.save(pro);
+        return "Proyecto "+pro.getName()+" creado";
     }
 
     @Override

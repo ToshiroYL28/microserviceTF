@@ -38,8 +38,9 @@ public class ProyectoController {
 
 
     @PostMapping
-    public ProyectosResource createComentario(@RequestBody CreateProyectosResource resource){
-        return mapper.toResource(proyectoService.create(resource));
+    public String createComentario(@RequestBody CreateProyectosResource resource){
+        //return mapper.toResource(proyectoService.create(resource));
+        return proyectoService.create(resource);
     }
 
     @DeleteMapping("/{id}")

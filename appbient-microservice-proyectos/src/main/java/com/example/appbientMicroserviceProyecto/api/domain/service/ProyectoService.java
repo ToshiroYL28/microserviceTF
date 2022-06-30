@@ -9,7 +9,7 @@ import java.util.List;
 public interface ProyectoService {
     List<Proyecto> getAll();
     Proyecto getById(Long id);
-    Proyecto create(CreateProyectosResource request);
+    String create(CreateProyectosResource request);
     Proyecto update(Long id ,Proyecto Proyecto);
     ResponseEntity<?> delete(Long ProyectoId);
 }
