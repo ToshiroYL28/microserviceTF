@@ -34,9 +34,9 @@ public class DetallesEventoServiceImpl implements DetallesEventoService {
     @Override
     public DetallesEventoEvento create(Long eventoId, CreateDetallesEventoResource resource) {
         DetallesEventoEvento detallesEvento = new DetallesEventoEvento();
-        detallesEvento.setPlace(detallesEvento.getPlace());
-        detallesEvento.setStart_date(detallesEvento.getStart_date());
-        detallesEvento.setEnd_date(detallesEvento.getEnd_date());
+            detallesEvento.setPlace(resource.getPlace());
+            detallesEvento.setStart_date(resource.getStart_date());
+            detallesEvento.setEnd_date(resource.getEnd_date());
         return detallesEventoRepository.save(detallesEvento);
     }
 

@@ -31,7 +31,7 @@ public class LugarEventoServiceImpl implements LugarEventoService {
     @Override
     public LugarEvento create(Long detallesEventoId, CreateLugarEventoResource request) {
         LugarEvento lugarEvento = new LugarEvento();
-        lugarEvento.setAddress(lugarEvento.getAddress());
+        lugarEvento.setAddress(request.getAddress());
         return lugarEventoRepository.save(lugarEvento);
     }
 

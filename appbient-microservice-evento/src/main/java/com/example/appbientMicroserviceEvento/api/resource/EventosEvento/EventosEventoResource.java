@@ -10,6 +10,6 @@ public class EventosEventoResource {
     private Long id;
     private String name;
     private String description;
-    private Boolean active;
+    private boolean active;
     private Date start_date;
 }

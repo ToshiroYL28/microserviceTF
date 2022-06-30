@@ -4,6 +4,6 @@ import com.example.appbientMicroserviceEvento.api.domain.model.entity.EventosEve
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public interface EventosEventoRepository extends JpaRepository<EventosEvento, Long> {
 }

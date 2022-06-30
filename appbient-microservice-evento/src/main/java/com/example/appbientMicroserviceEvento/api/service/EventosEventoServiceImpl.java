@@ -32,10 +32,10 @@ public class EventosEventoServiceImpl implements EventosEventoService {
     @Override
     public EventosEvento create(CreateEventosEventoResource request) {
         EventosEvento evento = new EventosEvento();
-        evento.setActive(evento.getActive());
-        evento.setName(evento.getName());
-        evento.setDescription(evento.getDescription());
-        evento.setStart_date(evento.getStart_date());
+            evento.setActive(true);
+            evento.setName(request.getName());
+            evento.setDescription(request.getDescription());
+            evento.setStart_date(request.getStart_date());
         return eventosEventoRepository.save(evento);
     }
 

@@ -32,7 +32,7 @@ public class ParticipantesEventoServiceImpl implements ParticipantesEventoServic
     @Override
     public ParticipantesEvento create(Long detallesEventoId, CreateParticipantesEventoResource request) {
         ParticipantesEvento participantesEvento = new ParticipantesEvento();
-        participantesEvento.setUserId(participantesEvento.getUserId());
+        participantesEvento.setUserId(request.getUserId());
         return participantesEventoRepository.save(participantesEvento);
     }
 

@@ -27,7 +27,7 @@ public class EventosEvento {
     @Size(max = 100)
     private String description;
 
-    private Boolean active;
+    private boolean active;
 
     private Date start_date;
 

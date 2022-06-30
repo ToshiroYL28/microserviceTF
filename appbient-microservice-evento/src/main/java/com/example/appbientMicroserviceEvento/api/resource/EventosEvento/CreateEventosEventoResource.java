@@ -4,9 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.sun.istack.NotNull;
+
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Getter
@@ -14,12 +15,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateEventosEventoResource {
-
+    @NotNull
+    @NotBlank
     private String name;
-
+    @NotNull
+    @NotBlank
     private String description;
-
-    private Boolean active;
-
+    @NotNull
+    @NotBlank
+    private boolean active;
+    @NotNull
+    @NotBlank
     private Date start_date;
 }

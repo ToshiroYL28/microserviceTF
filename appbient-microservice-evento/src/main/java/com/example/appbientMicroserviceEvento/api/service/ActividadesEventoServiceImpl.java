@@ -31,8 +31,8 @@ public class ActividadesEventoServiceImpl implements ActividadesEventoService {
     @Override
     public ActividadesEvento create(Long detallesEventoId, CreateActividadesEventoResource request) {
         ActividadesEvento actividadesEvento = new ActividadesEvento();
-        actividadesEvento.setName(actividadesEvento.getName());
-        actividadesEvento.setDescription(actividadesEvento.getDescription());
+        actividadesEvento.setName(request.getName());
+        actividadesEvento.setDescription(request.getDescription());
         return actividadesEventoRepository.save(actividadesEvento);
     }
 
