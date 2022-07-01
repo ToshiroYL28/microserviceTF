@@ -20,7 +20,7 @@ spring:
           predicates:
             - Path=/api/v1/eventos/**
         - id: microservice-foros
-          uri: lb://appbient-microservice-foros
+          uri: lb://appbient_microservice_foros
           predicates:
             - Path=/api/v1/publicacion/**
         - id: microservice-proyectos
@@ -28,6 +28,6 @@ spring:
           predicates:
               - Path=/api/v1/proyectos/**
         - id: microservice-usuarios
-          uri: lb://appbient-microservice-usuarios
+          uri: lb://appbient_microservice_usuarios
           predicates:
               - Path=/api/v1/ong/**
