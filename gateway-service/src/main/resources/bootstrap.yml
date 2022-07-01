@@ -30,4 +30,4 @@ spring:
         - id: microservice-usuarios
           uri: lb://appbient_microservice_usuarios
           predicates:
-              - Path=/api/v1/ong/**
+              - Path=/api/v1/ong/**,/api/v1/voluntario/**
