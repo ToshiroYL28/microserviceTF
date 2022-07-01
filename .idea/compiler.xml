@@ -8,8 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="parent-pom" />
+        <module name="appbient_microservice_foros" />
         <module name="appbient-microservice-proyecto" />
         <module name="appbientMicroserviceProyecto" />
+        <module name="appbient-microservice-proyectos" />
         <module name="discovery" />
         <module name="appbient_microservice_foro" />
         <module name="Appbient_microservice_Usuarios" />
@@ -30,8 +32,10 @@
       <module name="Appbient_microservice_Usuarios" options="-parameters" />
       <module name="appbient-microservice-evento" options="-parameters" />
       <module name="appbient-microservice-proyecto" options="-parameters" />
+      <module name="appbient-microservice-proyectos" options="-parameters" />
       <module name="appbientMicroserviceProyecto" options="-parameters" />
       <module name="appbient_microservice_foro" options="-parameters" />
+      <module name="appbient_microservice_foros" options="-parameters" />
       <module name="appbient_microservice_usuarios" options="-parameters" />
       <module name="appbientmicroserviceevento" options="-parameters" />
       <module name="config" options="-parameters" />
