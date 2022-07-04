@@ -1,4 +1,4 @@
-package com.example.appbient_microservice_foro;
+package com.example.microservice;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;
